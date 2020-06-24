@@ -4,11 +4,15 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import App from './components/App';
 import Board from './components/Board';
+import Candidate from './components/Candidate';
+import Home from './components/Home';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
+    <Home />
     <Board />
+    <Candidate />
   </React.StrictMode>,
   document.getElementById('root')
 );
