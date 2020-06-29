@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import imgUrl from '../blocks_image.jpg'
 
-const HomeComponent = ({ goLogin, app }) => {
+const HomeComponent = ({ goLogin, app, goLobby }) => {
 
   const formSignIn = {
     maxWidth: 330,
@@ -49,6 +49,7 @@ const HomeComponent = ({ goLogin, app }) => {
         <p style={signUp}>
               <button
                 className={"btn btn-lg btn-success btn-block"}
+                onClick={() => goLobby(app)}
               >
               新規アカウント登録する
             </button>
@@ -62,6 +63,7 @@ const HomeComponent = ({ goLogin, app }) => {
 
 HomeComponent.propTypes = {
   goLogin: PropTypes.func.isRequired,
+  goLobby: PropTypes.func.isRequired,
   app: PropTypes.shape({}).isRequired,
 }
 

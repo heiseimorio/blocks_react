@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { goLoginPage } from '../actions/index';
+import { goLoginPage, showLobby } from '../actions/index';
 import HomeComponent from '../components/HomeComponent';
 
 
@@ -9,6 +9,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   goLogin: () => dispatch(goLoginPage()),
+  goLobby: () => dispatch(showLobby()),
 })
 
 export default connect(
